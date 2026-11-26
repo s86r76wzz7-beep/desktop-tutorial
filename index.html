@@ -146,6 +146,11 @@
   .contact .big { font-size:clamp(24px, 3vw, 30px); font-weight:700; text-decoration:none; display:inline-block; margin-bottom:6px; }
   .contact .btn-main { background:#fff; color:var(--ink); margin-top:10px; }
   .contact .btn-main:hover { background:var(--green-soft); }
+  .person { display:grid; grid-template-columns:112px 1fr; gap:18px; align-items:center; margin:28px 0 0; }
+  .person img { display:block; width:112px; height:140px; object-fit:cover; border-radius:12px; background:#2b3942; }
+  .person b { display:block; font-size:18px; }
+  .person span { display:block; color:#b8c4ca; font-size:15.5px; line-height:1.45; margin-top:2px; }
+  @media (min-width:700px) { .person { grid-template-columns:144px 1fr; gap:22px; } .person img { width:144px; height:180px; } }
   footer { background:var(--ink); color:#8e9ca3; font-size:14px; border-top:1px solid #2b3942; }
   footer .wrap { padding-top:22px; padding-bottom:28px; }
 
@@ -367,7 +372,14 @@
   <div class="wrap">
     <div>
       <h2>Пришлите адрес сайта</h2>
-      <p class="muted narrow">В ответ пришлём три главные находки со снимками экрана. Письма и звонки принимает Сергей Плешкань, он же отвечает за работу.</p>
+      <p class="muted narrow">В ответ пришлём три главные находки со снимками экрана.</p>
+      <figure class="person">
+        <picture>
+          <source type="image/webp" srcset="img/sergey-480.webp 1x, img/sergey-960.webp 2x">
+          <img src="img/sergey-480.jpg" srcset="img/sergey-480.jpg 1x, img/sergey-960.jpg 2x" width="144" height="180" alt="Сергей Плешкань" loading="lazy">
+        </picture>
+        <figcaption><b>Сергей Плешкань</b><span>Отвечает на письма и звонки, ведёт работу от проверки до счёта.</span></figcaption>
+      </figure>
     </div>
     <div>
       <a class="big" href="tel:+79052178816">+7 (905) 217-88-16</a><br>
